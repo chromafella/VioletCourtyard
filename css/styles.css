@@ -99,6 +99,16 @@ nav a:hover{color:var(--text)}
 .music-item{padding:14px}
 .music-item h4{margin-top:10px}
 .music-embed{aspect-ratio: 1.6 / 1; border:0; width:100%; border-radius:12px; background:#0a0a0f}
+.music-art {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0a0a0f;
+  object-fit: cover;
+  display: block;
+}
+
 @media (max-width:920px){.music-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.music-grid{grid-template-columns:1fr}}
 
