@@ -79,23 +79,23 @@ nav a:hover{color:var(--text)}
 #mobileMenu a:hover{color:var(--text)}
 
 /* ---------- HERO ---------- */
-.hero {
+/*.hero {
   padding: 90px 0 70px;
   text-align: center;
   position: relative;
   overflow: hidden;
 
   /* Add the background image + gradient overlay */
-  background: linear-gradient(
+/*  background: linear-gradient(
       rgba(14, 14, 17, 0.85),
       rgba(14, 14, 17, 0.85)
     ),
     url("../images/img_2969.jpg") center center / cover no-repeat;
   background-attachment: fixed; /* Parallax-like effect on desktop */
-  border-bottom: 1px solid var(--border);
+/*  border-bottom: 1px solid var(--border);
   background-position: center -50px;
 }
-
+/*
 .hero h1 {
   font-size: clamp(2.4rem, 4.5vw, 4rem);
   letter-spacing: 0.4px;
@@ -123,6 +123,81 @@ nav a:hover{color:var(--text)}
 .hero h1, .hero p, .hero .cta {
   position: relative;
   z-index: 1; /* Make sure content sits above glow */
+/*}*/
+/* Background video styles */
+/* HERO — keep prior typography & glow, add video background */
+.hero {
+  padding: 90px 0 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Background video fills hero */
+.background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* cover without distortion */
+  z-index: -2;               /* behind overlays & content */
+}
+
+/* Dark gradient overlay ON TOP of the video (keeps text legible) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(14, 14, 17, 0.85),
+    rgba(14, 14, 17, 0.85)
+  );
+  z-index: -1;
+  opacity: 50%;
+}
+
+/* Violet/pink glow like before */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(139, 92, 246, 0.3),
+    rgba(236, 72, 153, 0.25) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep the nice font style you had */
+.hero h1 {
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  letter-spacing: 0.4px;
+}
+.hero p {
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0.8rem auto 1.6rem;
+}
+.hero h1, .hero p, .hero .cta, .hero .badge {
+  position: relative;
+  z-index: 1; /* above overlays/video */
+}
+
+/* Crop from the top if needed (adjust the px value) */
+.background-video { object-position: center -50px; }
+
+/* Mobile optimization: hide video and fall back to a still image */
+@media (max-width: 768px) {
+  .background-video { display: none; }
+  .hero {
+    background:
+      linear-gradient(rgba(14,14,17,.85), rgba(14,14,17,.85)),
+      url("../images/img_2969.jpg") center top / cover no-repeat;
+  }
 }
 
 
