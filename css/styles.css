@@ -190,7 +190,7 @@ nav a:hover{color:var(--text)}
 /* Crop from the top if needed (adjust the px value) */
 .background-video { object-position: center -50px; }
 
-/* Mobile optimization: hide video and fall back to a still image */
+/* Mobile optimization: hide video and fall back to a still image 
 @media (max-width: 768px) {
   .background-video { display: none; }
   .hero {
@@ -199,7 +199,7 @@ nav a:hover{color:var(--text)}
       url("../images/img_2969.jpg") center top / cover no-repeat;
   }
 }
-
+*/
 
 /* ---------- ABOUT ---------- */
 .about{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
