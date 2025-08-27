@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Videos — Violet Courtyard</title>
+  <meta name="description" content="Official Violet Courtyard videos: music videos, live sessions, and behind‑the‑scenes." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Violet Courtyard home">
+  <img src="images/VioletCourtyardLogo2024fulltextwhite.png" alt="Violet Courtyard Logo" class="brand-logo" />
+  <span class="brand-text">VIOLET COURTYARD</span>
+</a>
+
+      <nav aria-label="Primary">
+  <ul role="list">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#music">Music</a></li>
+    <li><a href="index.html#shows">Shows</a></li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="videos.html" aria-current="page">Videos</a></li>
+  </ul>
+</nav>
+<div class="nav-cta">
+  <a class="btn ghost" href="https://store.violetcourtyard.com">Shop</a>
+  <a class="btn primary" href="index.html#contact">Contact</a>
+  <button class="menu-btn" id="menuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+    <!-- simple icon -->
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+  </button>
+</div>
+</div>
+
+<div id="mobileMenu" role="dialog" aria-label="Mobile menu">
+  <div class="container">
+    <a href="index.html#about" data-close>About</a>
+    <a href="index.html#music" data-close>Music</a>
+    <a href="index.html#shows" data-close>Shows</a>
+    <a href="index.html#gallery" data-close>Gallery</a>
+    <a href="index.html#contact" data-close>Contact</a>
+  </div>
+</div>
+</header>
+
+  <main id="main">
+    <!-- HERO / PAGE TITLE -->
+    <section class="hero container" style="padding:70px 0 40px">
+      <span class="badge">Videos</span>
+      <h1>Watch Violet Courtyard</h1>
+      <p>Official Music Videos</p>
+      <div class="cta" style="margin-top:10px">
+        <a class="btn" href="https://www.youtube.com/@violetcourtyard" target="_blank" rel="noopener">YouTube Channel</a>
+      </div>
+    </section>
+
+    <!-- VIDEOS GRID -->
+    <section class="section container">
+      <h2>Latest Releases</h2>
+      <div class="music-grid" style="margin-top:12px">
+        <article class="card music-item">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/tFqiaTaHrbU" title="Work it Out" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h4>Work it Out</h4>
+          <p class="muted">Jan 28, 2025</p>
+        </article>
+        <article class="card music-item">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/EHqhdiEnU2o" title="I Don't Want You" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h4>I Don't Want You</h4>
+          <p class="muted">Nov 5, 2024</p>
+        </article>
+        <article class="card music-item">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/YFFUQMNbF_c" title="Soulglow" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h4>Soulglow</h4>
+          <p class="muted">Mar 20, 2023</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- OPTIONAL: PLAYLISTS -->
+    <section class="section container">
+      <h2>Behind The Scenes & Unlisted Content</h2>
+      <div class="music-grid" style="margin-top:12px">
+        <article class="card music-item">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/KWGYkCgApOI" title="SG" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h4>Soulglow (Multicam Footage)</h4>
+          <p class="muted">Behind the Scenes 2023</p>
+        </article>
+        <article class="card music-item">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/bKvIyUZ5c3g" title="Birds" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h4>Birds at the Window (UNLISTED)</h4>
+          <p class="muted">2022</p>
+        </article>
+        <article class="card music-item">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/5-4_v-miHHA" title="Save Me" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h4>Save Me (UNLISTED)</h4>
+          <p class="muted">2022</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Violet Courtyard. All rights reserved.</small>
+      <br>
+      <small>BUILD-v0.0.5 | Last Updated 8.27.25</small>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle (same as index.html)
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const toggleMenu = () => {
+      const open = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!open));
+      menuBtn.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      mobileMenu.style.display = open ? 'none' : 'block';
+    };
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileMenu.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', () => {
+      if (getComputedStyle(menuBtn).display !== 'none') toggleMenu();
+    }));
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Ensure menu auto-closes on desktop resize
+    const syncMenuToViewport = () => {
+      if (getComputedStyle(menuBtn).display === 'none') {
+        mobileMenu.style.display = 'none';
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.setAttribute('aria-label','Open menu');
+      }
+    };
+    window.addEventListener('resize', syncMenuToViewport);
+    syncMenuToViewport();
+  </script>
+</body>
+</html>
